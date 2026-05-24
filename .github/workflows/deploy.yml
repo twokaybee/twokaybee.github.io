@@ -3,14 +3,21 @@ on:
   push:
     branches:
       - main
+permissions:
+  pages: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
+      - name: Install Zola
+        run: sudo apt-get update && sudo apt-get install -y zola
       - name: Build with Zola
-        uses: getzola/github-pages@latest
+        run: zola build
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
