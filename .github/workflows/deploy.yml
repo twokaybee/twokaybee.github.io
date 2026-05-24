@@ -11,6 +11,6 @@ jobs:
         with:
           submodules: true
       - name: Build with Zola
-        uses: getzola/github-pages@v0.22.1
+        uses: getzola/github-pages@latest
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
