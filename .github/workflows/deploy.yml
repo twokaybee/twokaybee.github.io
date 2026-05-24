@@ -15,3 +15,4 @@
             uses: getzola/github-pages@v0.22.1
           - name: Deploy to GitHub Pages
             uses: actions/deploy-pages@v4
+    ```
