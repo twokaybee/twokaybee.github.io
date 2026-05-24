@@ -1,0 +1,17 @@
+```yaml
+    name: Deploy Zola to GitHub Pages
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+            with:
+              submodules: true
+          - name: Build with Zola
+            uses: getzola/github-pages@v0.22.1
+          - name: Deploy to GitHub Pages
+            uses: actions/deploy-pages@v4
