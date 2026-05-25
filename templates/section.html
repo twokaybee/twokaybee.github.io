@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <h1 style="margin-bottom: 2rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem;">{{ section.title }}</h1>
+    
+    <!-- Dynamically pull pages based on whether pagination is active -->
+    {% set pages = section.pages %}
+    {% if paginator %}
+        {% set pages = paginator.pages %}
+    {% endif %}
+
+    <div class="posts">
+        {% for page in pages %}
+        <article class="post on-list" style="margin-bottom: 2.5rem;">
+            <h2 class="post-title" style="margin-bottom: 0.2rem; font-size: 1.5rem;">
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </h2>
+            <div class="post-meta" style="color: #888; font-size: 0.9em; margin-bottom: 0.8rem;">
+                {{ page.date | date(format="%B %d, %Y") }}
+            </div>
+            <div class="post-description" style="line-height: 1.6;">
+                {{ page.description | default(value="Read this article...") }}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    
+    <!-- Pagination Controls -->
+    {% if paginator %}
+    <div class="pagination" style="margin-top: 3rem; display: flex; justify-content: space-between; font-weight: bold;">
+        {% if paginator.previous %}
+            <a href="{{ paginator.previous }}">« Newer Posts</a>
+        {% else %}
+            <span></span>
+        {% endif %}
+        
+        {% if paginator.next %}
+            <a href="{{ paginator.next }}">Older Posts »</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</main>
+{% endblock content %}

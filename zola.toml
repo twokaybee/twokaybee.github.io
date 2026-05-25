@@ -1,25 +1,29 @@
 base_url = "https://2kb.in"
-title = "Sanoj Kumar C P"
+title = "2kb.in"
 theme = "hacker"
 compile_sass = true
 build_search_index = false
-
+taxonomies = [
+    {name = "tags"}
+]
 [markdown]
 [markdown.highlighting]
 theme = "github-dark"
 
 [extra]
 logo = ""
-author = "Sanoj Kumar C P"
+author = "2kb"
 description = "Staff Software Engineer | Distributed Systems, EDA & Backend"
 github = "twokaybee"
 title_separator = "|"
 
 menu = [
-    { url = "/", name = "Home" }
+    { url = "/", name = "Home" },
+    { url = "/posts/", name = "Blog" },
+    { url = "/contact/", name = "Contact" }
 ]
 
 social_links = [
     { name = "github", url = "https://github.com/twokaybee" },
-    { name = "email", url = "mailto:sanoj2kb@gmail.com" }
+    { name = "email", url = "mailto:sanojcp@2kb.in" }
 ]

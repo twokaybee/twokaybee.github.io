@@ -1,12 +1,12 @@
 +++
-title = "Sanoj Kumar C P"
+title = "2kb.in"
 paginate_by = 10
 sort_by = "date"
 +++
 
 ## The Architecture of Reliability
 
-For over two decades, my engineering journey has been defined by a single, driving pursuit: building mission-critical distributed systems that simply do not fail. As a Staff Software Engineer, my technical toolkit revolves around heavily optimized Go and Rust, focusing on cloud-native infrastructure, Event-Driven Architectures, and high-availability platforms. But the real story isn't just about the languages I write; it's about untangling legacy bottlenecks, resolving complex interoperability challenges, and architecting solutions designed for the long haul.
+My name is Sanoj Kumar and for over two decades, my engineering journey has been defined by a single, driving pursuit: building mission-critical distributed systems that simply do not fail. As a Staff Software Engineer, my technical toolkit revolves around heavily optimized Go and Rust, focusing on cloud-native infrastructure, Event-Driven Architectures, and high-availability platforms. But the real story isn't just about the languages I write; it's about untangling legacy bottlenecks, resolving complex interoperability challenges, and architecting solutions designed for the long haul.
 
 ### The Shift to Independence & Global Scale
 Eight years ago, I transitioned into independent consulting, a move that allowed me to take ownership of deep architectural challenges across diverse, global domains. 
