@@ -20,6 +20,7 @@ title_separator = "|"
 menu = [
     { url = "/", name = "Home" },
     { url = "/posts/", name = "Blog" },
+    { url = "/portfolio/", name = "Portfolio" },
     { url = "/contact/", name = "Contact" }
 ]
 
