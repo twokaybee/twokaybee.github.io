@@ -2,110 +2,154 @@
 date = 2026-08-24
 weight = 1
 title = "Portfolio | Sanoj Kumar C P"
-description = "Portfolio of a Principal Backend Architect & Engineering Leader"
+description = "Portfolio of a Staff Backend Engineer specializing in Go, Elixir and Distributed Systems"
 +++
 
 # Sanoj Kumar C P
-## Principal Backend Architect & Engineering Leader
+## Staff Backend Engineer | Go & Elixir | Distributed Systems
 
-I am a Principal Backend Architect with twenty years of experience building and scaling high-traffic distributed systems. My background spans 12 years of deep engineering in complex enterprise ERPs and financial ledgers in Java, combined with over 8 years operating as a Principal Architect and Fractional CTO scaling event-driven microservices in Go. I specialize in architecting resilient platforms, resolving legacy bottlenecks, and executing complex database migrations without dropping live traffic. 
+I am a Staff Backend Engineer with 20 years of software engineering experience, specializing in backend architecture, distributed systems and enterprise platform modernization. My strongest recent experience is in Go, where I led the transformation of a legacy global travel booking platform into eighteen independently deployable microservices. I also independently designed and developed an operational back-office application using Elixir and Phoenix, integrating it with the existing Go platform.
 
-I operate with equal proficiency whether modernizing established Java enterprise ecosystems or designing high-throughput Go architectures. I recently managed the complete architectural migration of a monolithic global travel platform into eighteen independent Go microservices using NATS, gRPC, PostgreSQL, and Redis. Concurrently, I drove back-office modernization by strategically deploying Java/Spring Boot frameworks to replace legacy operations consoles.
+My engineering experience spans microservices, event-driven architectures, asynchronous messaging, distributed workflows, financial integrations, database synchronization and third-party service integrations. I work across the complete engineering lifecycle, from architecture and technical planning to implementation, integration and production delivery.
 
-Coming from an extensive background in enterprise ERP integrations, banking gateways, and financial ledgers, I enforce strict data integrity, fault tolerance, and system performance under heavy load. My previous roles include engineering the core scaffolding for the Intuit mobile banking platform, accelerating financial application deployments for US credit unions, and building customized rapid application development frameworks in Java. 
+Alongside my backend engineering work, I actively explore AI application and agent development across the Go and Elixir ecosystems. My current toolkit includes LangChainGo, CloudWeGo Eino, ReqLLM and Jido, with Ollama and locally hosted models for experimentation. I use tools such as Cursor and Claude Code to accelerate development while retaining responsibility for architecture, implementation decisions, code review and testing.
 
-Beyond writing foundational code, I focus on building strong engineering teams. I mentor technical leads, enforce clean coding standards, and treat foundational codebases as internal open source to drastically accelerate developer onboarding. Furthermore, I operate with an AI-native workflow, leveraging modern tools (including Cursor, Claude Code, and Open Code) to drastically accelerate architectural mapping and ensure technical execution aligns directly with actual business goals.
+I also bring extensive experience in technical leadership, having led cross-functional teams involving backend and frontend developers, QA engineers, database administrators and DevOps engineers.
+
 <p>&nbsp;</p>
 
 ---
+
 <p>&nbsp;</p>
 
 ## Projects & Experience
 
 ### Tathkarah Travels
-**Title:** Principal Architect & Fractional CTO (Global Booking System)
+**Title:** Principal Architect & Fractional CTO (Global Booking Platform)
 
-I managed the complete replacement of a monolithic legacy Global Distribution System. I engineered a distributed platform of eighteen independent Go services optimized to handle massive concurrency and unstable network conditions, successfully executing the migration in phases without any system downtime or data loss.
+I led the architectural modernization of a legacy Global Distribution System into eighteen independently deployable Go microservices. The migration was executed in phases, allowing the existing booking platform to continue operating without downtime or data loss.
 
-To support operations while the core was being rewritten, I led a strategic back-office modernization. I researched and deployed a highly customizable Java/Spring Boot low-code framework (iCodeBetter) to rapidly replace the legacy Node.js/Angular operations console. This provided a robust operational backbone, granting the engineering team the necessary runway to focus entirely on the massive core Go migration.
+I designed and developed core backend services, shared libraries and middleware, introducing distributed workflow patterns including Saga, idempotency, retries and circuit breakers. I implemented asynchronous messaging using NATS and Kafka, with gRPC and Protocol Buffers for inter-service communication.
 
-I wrote the foundational shared libraries, middleware, and core services. I architected a provider-agnostic asynchronous messaging fabric, ultimately deploying NATS for its lightweight footprint and high-throughput performance. I implemented low-overhead inter-service communication via gRPC and Protobuf, keeping services completely decoupled for maximum team autonomy.
+The platform integrated with global travel suppliers including Travelport/Galileo, RezLive and Juniper, as well as direct airline APIs. I also worked on payment integrations supporting MADA, KNET, cards and Apple Pay.
 
-Furthermore, I architected a centralized control plane driven by a custom Business Process Management (BPM) engine. I engineered a secure finite state machine to remove hardcoding from the environment entirely, empowering business operations to dynamically publish configurations directly to the core booking service utilizing MongoDB and Redis caches.
+Another major responsibility was the development of a centralized management and configuration platform driven by a custom Go-based Business Process Management engine and finite state machine. Configuration and operational data were managed through MongoDB and Redis, allowing business operations to control workflows without hardcoding every change into the services.
 
-To support massive data loads, I designed a high-throughput ETL aggregation service to concurrently process, normalize, and cache heavy flight data across massive supplier ecosystems including Travelport, Galileo, Rezlive, and Juniper, alongside direct airline API integrations.
+My responsibilities also included architecture decisions, technical roadmaps, engineering standards, mentoring and coordinating technical delivery.
 
-**Stack:** Go, Java, Spring Boot, NATS, gRPC, Protobuf, PostgreSQL, MongoDB, Redis, Kubernetes, AWS
+**Stack:** Go, Microservices, NATS, Kafka, gRPC, Protocol Buffers, MongoDB, PostgreSQL, Redis, Flutter, AWS
+
 <p>&nbsp;</p>
 
 ---
+
+<p>&nbsp;</p>
+
+### Tathkarah Travels
+**Title:** Elixir/Phoenix Backend Developer (Separate Contract)
+
+I independently designed and developed an operational back-office application using Elixir and Phoenix, integrating it with the existing Go-based travel platform.
+
+The application provides operational configuration modules covering suppliers, tenants, currencies, exchange rates, promotions, deals, booking configurations, payment gateways, service charges, airlines and airports.
+
+I implemented two-way booking synchronization and configuration publishing between the Phoenix application and the Go platform using NATS and Go data pipelines. I also configured Broadway pipelines to handle NATS and Kafka messaging.
+
+For background processing, I implemented Oban jobs to enrich missing hotel information by retrieving data from the RezLive API when the Go platform reported a HOTEL_NOT_FOUND event. The application uses PostgreSQL and Ecto for persistence, with Zoi for validation.
+
+**Stack:** Elixir, Phoenix, Ecto, Broadway, Oban, Zoi, NATS, Kafka, PostgreSQL, MongoDB, Redis, RezLive API, Go
+
+<p>&nbsp;</p>
+
+---
+
 <p>&nbsp;</p>
 
 ### Rockchain
-**Title:** Technical Consultant (P2P Data Traceability Platform)
+**Title:** Technical Consultant (Decentralized Data Management Platform)
 
-I was brought in on a targeted advisory and engineering contract to take technical ownership of a decentralized data management architecture. The primary objective was building a secure digital asset tracking and enterprise file traceability system.
+I contributed to a decentralized data management platform focused on digital asset tracking and secure peer-to-peer data exchange.
 
-My core execution focused on stabilizing a volatile initial codebase by completely overhauling the peer-to-peer networking layer. I engineered resilient central registries and custom data synchronization nodes utilizing Syncthing protocols. Furthermore, I resolved critical network consensus vulnerabilities and wrote the core Ethereum-based authorization logic.
+My primary work involved Go-based synchronization, discovery and registry services using Syncthing protocols. I worked on the services responsible for discovering decentralized nodes and coordinating data exchange between them. I also implemented Ethereum-based authorization logic and contributed to the supporting cloud infrastructure and secure desktop client integration.
 
-Ultimately, I successfully delivered a production-ready proof of concept that achieved immutable proof of authorization for data synchronization across enterprises, shipping alongside a custom secure desktop client.
+**Stack:** Go, Syncthing, Ethereum, Node.js, Vue.js, Electron, Kubernetes, GCP
 
-**Stack:** Custom Ethereum, Syncthing (P2P), Node.js, Kubernetes, GCP
 <p>&nbsp;</p>
 
 ---
+
 <p>&nbsp;</p>
 
 ### SOD Technologies Pvt Ltd.
-**Title:** Technical Lead (Enterprise ERP Architecture)
+**Title:** Technical Lead (Enterprise ERP & Financial Integrations)
 
-I led the architectural customization and large-scale integration of the iDempiere Business Suite for global enterprise clients. Operating as the primary technical bridge between enterprise stakeholders and the engineering team, I translated complex business workflows into scalable OSGi-compliant plugin architectures.
+I led the customization and integration of the iDempiere Business Suite for enterprise clients. My work included integrating enterprise platforms with core banking systems such as Axis Bank and SBI, developing financial transaction workflows and building custom point-of-sale interfaces.
 
-My core contribution was engineering complex financial integrations that securely bridged core banking systems, including Axis Bank and SBI, directly with legacy point-of-sale infrastructures. I ensured that automated payment processing and large-scale salary distributions were handled with absolute transaction integrity.
+I also engineered data synchronization pipelines for distributed operations, including transactional data replication between remote locations and central systems. Additional work included automated document ingestion using Tesseract OCR.
 
-To maintain perfect data accuracy across distributed retail and warehouse environments, I engineered highly reliable real-time database synchronization pipelines utilizing Scriptella. Additionally, I built automated document ingestion workflows powered by optical character recognition using Tesseract OCR, drastically reducing manual data entry overhead for the enterprise.
+I was responsible for technical architecture, integration design and coordinating engineering delivery.
 
-**Stack:** Java, Spring, RabbitMQ, ActiveMQ, OSGi, PostgreSQL, ERP (iDempiere/ADempiere)
+**Stack:** Java, iDempiere, OSGi, PostgreSQL, RabbitMQ, ActiveMQ, Scriptella, Tesseract OCR
+
 <p>&nbsp;</p>
 
 ---
+
 <p>&nbsp;</p>
 
 ### Assyst International Pvt Ltd.
-**Title:** Module Lead (Intuit Mobile Money Platform)
+**Title:** Module Lead (Intuit Mobile Banking)
 
-I contributed to the core engineering of the Intuit Mobile Money platform, a secure platform delivering next-generation mobile financial services directly to US credit unions and banking institutions.
+I worked on the FI Builder Engine for the Intuit mobile banking platform. I designed a metadata-driven application generation framework that used financial institution configurations to programmatically generate customized mobile web applications and financial service modules.
 
-My core contribution was engineering the FI Builder, an automated scaffolding tool designed to drastically accelerate the deployment of these financial applications. I designed this engine to utilize metadata to extract financial institution configurations directly from Intuit QuickBooks. By automating the extraction and configuration processes, the engine programmatically generated custom mobile web applications.
+The work focused on automating application scaffolding and reducing repetitive development effort for financial institution deployments.
 
-This architectural approach eliminated significant manual coding overhead, allowed for the rapid onboarding of new US credit unions, and significantly accelerated overall software delivery timelines for the enterprise.
+**Stack:** Java, Struts, XML, Intuit Tools, Mobile Banking
 
-**Stack:** Java, Struts, XML, Python, Intuit Tools, Core Banking Architecture
 <p>&nbsp;</p>
 
 ---
+
 <p>&nbsp;</p>
 
 ### Hummingbird Computer Software LLC
-**Title:** Architect & Lead Software Engineer (Enterprise RAD Framework)
+**Title:** Architect & Lead Software Engineer (Enterprise Application Frameworks)
 
-I conceptualized and engineered a custom rapid application development (RAD) framework built entirely in Java, designed to modernize legacy systems and bypass the limitations inherent in older Oracle D2K paradigms. I engineered a core engine capable of dynamically generating user interfaces directly from database schemas and XML configurations.
+I conceptualized and developed iBForte, a custom Java rapid application development framework designed to simplify enterprise application development and overcome limitations in legacy Oracle D2K environments.
 
-Using this foundational framework, I architected and built a comprehensive suite of enterprise software, including accounts, stock management, HR/payroll, and complex job costing systems. I successfully merged all these distinct backend modules into one unified enterprise resource planning system. 
-
-Additionally, I served as Lead Systems Architect for a Secure Enterprise Document Management System (Archiva EDMS), designing hierarchical storage topology and robust document-locking concurrency controls.
+I also served as Lead Systems Architect for an enterprise document management system, working on document processing, hierarchical storage, document locking and concurrency controls.
 
 **Stack:** Java, Swing, RMI, RabbitMQ, Oracle DB, MySQL, Framework Development
+
 <p>&nbsp;</p>
 
 ---
+
 <p>&nbsp;</p>
 
-### Early Career Engineering Roles (2005 - 2008)
+### Early Career Engineering Roles (2005–2008)
 **Title:** Lead Software Engineer (Megahands) & Senior Developer (ITECSOFT)
 
-At **Megahands Infotech**, I engineered complex workflow logic for collaborative scientific manuscript editing. I built a custom programmatic PDF rendering pipeline that transformed raw collaborative text inputs into publication-ready academic documents on the fly, complete with secure document locking and concurrent state management.
+At Megahands Infotech, I developed workflow functionality for collaborative scientific manuscript editing and engineered a programmatic PDF rendering pipeline for generating publication-ready documents.
 
-At **ITECSOFT**, I developed comprehensive Fintech and ERP applications in Oracle D2K. I engineered a complete contract management system tracking the full business lifecycle from project budgets to balance-sheet reporting. I was hand-picked by the CTO to independently lead all Java initiatives across Java, VB6, and natively localized Arabic OS environments for UAE deployments.
+At ITECSOFT, I developed ERP, financial and contract management applications, including business workflows covering project budgets and financial reporting. I also worked on enterprise application development and Arabic-localized deployments for UAE clients.
 
-**Stack:** Java, J2EE, Struts, VB6, Oracle DB, MySQL, XML, Document Rendering
+**Stack:** Java, J2EE, Struts, VB6, Oracle DB, MySQL, XML, PDF Generation
+
+<p>&nbsp;</p>
+
+---
+
+<p>&nbsp;</p>
+
+### AI Application & Agent Engineering
+**Title:** Independent Technical Exploration
+
+I am actively exploring the engineering of AI-powered applications, LLM integrations and agent-based systems, with a focus on Go and Elixir rather than model training or traditional machine learning.
+
+In Go, I work with LangChainGo and CloudWeGo Eino to understand tool calling, agent workflows, orchestration and integration of language models into backend applications.
+
+In Elixir, I explore ReqLLM and Jido for LLM integration, structured interactions and agent-based application development. I also experiment with Ollama and locally hosted models to evaluate inference behaviour and build application workflows without relying entirely on hosted AI services.
+
+My focus is on understanding the underlying frameworks and building practical tools that connect language models with real application logic and backend systems.
+
+**Stack:** Go, Elixir, LangChainGo, CloudWeGo Eino, ReqLLM, Jido, Ollama
